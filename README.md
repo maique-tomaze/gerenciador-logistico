@@ -1,32 +1,56 @@
 # Gerenciador Logístico
 
-Sistema desenvolvido como atividade prática para organizar produtos, endereços, transportadores e fretes.
+Sistema web desenvolvido como Atividade Prática Orientada da disciplina de Fundamentos de Programação para Internet. O sistema organiza produtos, endereços, transportadores e fretes.
+
+## Objetivo
+
+Permitir o cadastro e a consulta de dados logísticos e a criação de fretes relacionando um transportador, uma origem, um destino e vários produtos.
 
 ## Funcionalidades
 
-- Cadastrar, consultar e editar produtos.
-- Cadastrar, consultar e editar endereços.
-- Cadastrar, consultar e editar transportadores.
-- Cadastrar fretes com transportador, endereço de origem, endereço de destino e produtos.
-- Consultar fretes por data e baixar o relatório em CSV.
+- Cadastrar, listar e editar produtos.
+- Cadastrar, listar e editar endereços.
+- Cadastrar, listar e editar transportadores.
+- Cadastrar fretes com transportador, origem, destino e produtos.
+- Informar a quantidade de cada produto transportado.
+- Consultar os fretes cadastrados.
+- Gerar um relatório diário e exportá-lo em formato CSV.
 
-## Tecnologias
+## Tecnologias utilizadas
 
 - PHP
 - MySQL
 - HTML
 - CSS
 - Bootstrap
+- JavaScript
+- XAMPP
+
+## Estrutura principal
+
+- `index.php`: menu principal do sistema.
+- `cadastro_produtos.php` e arquivos de listagem: gestão de produtos.
+- `cadastro_enderecos.php` e arquivos de listagem: gestão de endereços.
+- `cadastro_transportadores.php` e arquivos de listagem: gestão de transportadores.
+- `cadastro_fretes.php`: criação de fretes com vários produtos.
+- `listar_fretes.php`: consulta dos fretes cadastrados.
+- `relatorio_fretes.php`: consulta diária e exportação CSV.
+- `conexao.php`: configuração da conexão com o MySQL.
 
 ## Como executar
 
-1. Instale e abra o XAMPP.
-2. Inicie o Apache e o MySQL.
-3. Coloque a pasta `gerenciador-logistico` dentro da pasta `htdocs`.
-4. Crie o banco de dados `gerenciador_logistico` no phpMyAdmin e configure as tabelas usadas pelo sistema.
-5. Confira os dados de conexão em `conexao.php`.
-6. Abra no navegador: `http://localhost/gerenciador-logistico/index.php`
+1. Instale o XAMPP.
+2. Inicie os serviços Apache e MySQL.
+3. Crie o banco `gerenciador_logistico` no phpMyAdmin.
+4. Crie as tabelas necessárias para produtos, endereços, transportadores, fretes e a relação entre fretes e produtos.
+5. Copie a pasta do projeto para `htdocs`.
+6. Ajuste o usuário, a senha e o banco em `conexao.php`, se necessário.
+7. Acesse `http://localhost/gerenciador-logistico/index.php`.
+
+## Repositório
+
+Este projeto está publicado em: <https://github.com/maique-tomaze/gerenciador-logistico>
 
 ## Observação
 
-Este projeto foi desenvolvido para fins acadêmicos.
+Projeto desenvolvido para fins acadêmicos.
