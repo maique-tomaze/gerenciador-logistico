@@ -55,7 +55,7 @@ $semProdutos = !$produtos || $produtos->num_rows === 0;
         <p class="aviso">Para cadastrar um frete, são necessários pelo menos um transportador, dois endereços e um produto.</p>
         <ul>
             <?php if ($semTransportadores): ?><li><a href="cadastro_transportadores.php">Cadastrar transportador</a></li><?php endif; ?>
-            <?php if ($semEnderecos): ?><li><a href="enderecos.php.php">Cadastrar endereços</a></li><?php endif; ?>
+            <?php if ($semEnderecos): ?><li><a href="cadastro_enderecos.php">Cadastrar endereços</a></li><?php endif; ?>
             <?php if ($semProdutos): ?><li><a href="cadastro_produtos.php">Cadastrar produto</a></li><?php endif; ?>
         </ul>
     <?php else: ?><form action="salvar_frete.php" method="POST">

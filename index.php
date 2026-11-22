@@ -20,15 +20,8 @@
                 <a class="nav-link" href="listar_produtos.php">Produtos</a>
                 <a class="nav-link" href="listar_enderecos.php">Endereços</a>
                 <a class="nav-link" href="listar_transportadores.php">Transportadores</a>
-                <a class="nav-link" href="listar_fretes.php">Fretes</a><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.php">
-        
-    <div>
-    </div>
-</nav>
+                <a class="nav-link" href="listar_fretes.php">Fretes</a>
                 <a class="nav-link" href="relatorio_fretes.php">Relatórios</a>
-
             </div>
         </div>
     </nav>
@@ -58,7 +51,7 @@
                     <div class="card-body">
                         <h2 class="h5">Endereços</h2>
                         <p>Organize os locais de origem e destino.</p>
-                        <a class="btn btn-primary" href="enderecos.php.php">Cadastrar endereço</a>
+                        <a class="btn btn-primary" href="cadastro_enderecos.php">Cadastrar endereço</a>
                         <a class="btn btn-outline-primary" href="listar_enderecos.php">Ver lista</a>
                     </div>
                 </div>

@@ -54,7 +54,7 @@ $resultado = $conexao->query(
         </table>
     <?php endif; ?>
 
-    <a href="enderecos.php.php">Cadastrar outro endereço</a>
+    <a href="cadastro_enderecos.php">Cadastrar outro endereço</a>
 </body>
 </html>
 <?php

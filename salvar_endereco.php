@@ -2,13 +2,22 @@
 
 include "conexao.php";
 
-$nome = $_POST["nome"];
-$rua = $_POST["rua"];
-$numero = $_POST["numero"];
-$bairro = $_POST["bairro"];
-$cidade = $_POST["cidade"];
-$estado = $_POST["estado"];
-$cep = $_POST["cep"];
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    exit("Acesse esta página pelo formulário de cadastro.");
+}
+
+$nome = trim($_POST["nome"] ?? "");
+$rua = trim($_POST["rua"] ?? "");
+$numero = trim($_POST["numero"] ?? "");
+$bairro = trim($_POST["bairro"] ?? "");
+$cidade = trim($_POST["cidade"] ?? "");
+$estado = strtoupper(trim($_POST["estado"] ?? ""));
+$cep = trim($_POST["cep"] ?? "");
+
+if ($nome === "" || $rua === "" || $cidade === "" || !preg_match('/^[A-Z]{2}$/', $estado)) {
+    exit("Informe nome, rua, cidade e estado válidos.");
+}
 
 $sql = $conexao->prepare(
     "INSERT INTO enderecos (nome, rua, numero, bairro, cidade, estado, cep)
@@ -27,7 +36,8 @@ $sql->bind_param(
 );
 
 if ($sql->execute()) {
-    echo "Endereço cadastrado com sucesso!";
+    header("Location: listar_enderecos.php");
+    exit;
 } else {
     echo "Erro ao cadastrar endereço: " . $sql->error;
 }
