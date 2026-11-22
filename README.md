@@ -41,11 +41,12 @@ Permitir o cadastro e a consulta de dados logísticos e a criação de fretes re
 
 1. Instale o XAMPP.
 2. Inicie os serviços Apache e MySQL.
-3. Crie o banco `gerenciador_logistico` no phpMyAdmin.
-4. Crie as tabelas necessárias para produtos, endereços, transportadores, fretes e a relação entre fretes e produtos.
-5. Copie a pasta do projeto para `htdocs`.
-6. Ajuste o usuário, a senha e o banco em `conexao.php`, se necessário.
-7. Acesse `http://localhost/gerenciador-logistico/index.php`.
+3. No phpMyAdmin, acesse a aba **SQL**.
+4. Importe o arquivo `database.sql` ou cole seu conteúdo no campo de SQL.
+5. Confirme que o banco `gerenciador_logistico` e suas cinco tabelas foram criados.
+6. Copie a pasta do projeto para `htdocs`.
+7. Ajuste o usuário, a senha e o banco em `conexao.php`, se necessário.
+8. Acesse `http://localhost/gerenciador-logistico/index.php`.
 
 ## Repositório
 
